@@ -16,12 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="FirstPlatformer"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=500
 window/size/height=500
+
+[physics]
+
+2d/default_gravity=300
 
 [rendering]
 
