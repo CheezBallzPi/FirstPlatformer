@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 88.6667, 10 )
+
+[node name="Main" type="Node"]
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 222.235, 162.976 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 219, 262 )
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+color = Color( 0.168627, 0.290196, 0.709804, 1 )
+polygon = PoolVector2Array( 130.299, 251.928, 130.388, 271.705, 307.759, 271.97, 307.583, 252.017 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( -121.93, 399.706 )
+rotation = -1.5708
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 219, 262 )
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2"]
+color = Color( 0.168627, 0.290196, 0.709804, 1 )
+polygon = PoolVector2Array( 130.299, 251.928, 130.388, 271.705, 307.759, 271.97, 307.583, 252.017 )

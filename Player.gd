@@ -46,8 +46,6 @@ func _physics_process(delta):
 	match(is_on_floor()):
 		true: jump_state = "grounded"
 		false: jump_state = "airborne"
-		
-	print(move_state + " " + jump_state)
 	
 func _process(delta):
 	match(move_state):
